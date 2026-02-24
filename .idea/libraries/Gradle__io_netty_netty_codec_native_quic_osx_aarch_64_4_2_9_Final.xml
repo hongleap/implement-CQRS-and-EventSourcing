@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.netty:netty-codec-native-quic:osx-aarch_64:4.2.9.Final" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.netty" artifactId="netty-codec-native-quic" version="4.2.9.Final" baseVersion="4.2.9.Final" />
+    <CLASSES>
+      <root url="jar://C:/Program Files/jdk-21.0.9/caches/modules-2/files-2.1/io.netty/netty-codec-native-quic/4.2.9.Final/7725db063980a53420afbced5fb39dbd0eebbd8a/netty-codec-native-quic-4.2.9.Final-osx-aarch_64.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.axonframework:axon-modelling:4.13.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.axonframework" artifactId="axon-modelling" version="4.13.0" baseVersion="4.13.0" />
+    <CLASSES>
+      <root url="jar://C:/Program Files/jdk-21.0.9/caches/modules-2/files-2.1/org.axonframework/axon-modelling/4.13.0/23e9c140377eaf5950fabd9875b4f3cea09361d0/axon-modelling-4.13.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,108 @@
+eureka:
+  instance:
+    instance-id: ${spring.application.name}
+    prefer-ip-address: true
+server:
+  port: 20262
+spring:
+  application:
+    name: pipeline
+  profiles:
+    active: dev
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    function:
+      definition:
+        - processProduct
+        - processMessage
+        - processProductDetail
+        - captureProduct
+        - consumeDbzEvent
+        - captureEnvelope
+    stream:
+      bindings:
+        captureEnvelope-in-0:
+          destination: itp_cdc.CORE_BANKING.RECORD_XML
+          group: record_xml_2
+        consumeDbzEvent-in-0:
+          destination: itp_cdc.CORE_BANKING.RECORD_XML
+          group: record_xml_1
+        consumeDbzEvent-out-0:
+          destination: cleaned_record
+          content-type: application/json
+        processProductDetail-in-0:
+          destination: product-detail # topic_name
+          group: monitor-group2 # consumer_group_id
+          content-type: application/json
+        processProduct-in-0:
+          destination: test-product # topic_name
+          group: monitor-group # consumer_group_id
+          content-type: application/json
+        processMessage-in-0:
+          destination: test-topic
+        processProductDetail-out-0:
+          destination: processed-product-detail
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: localhost:29092,localhost:29094,localhost:29096
+          configuration:
+            auto.offset.reset: earliest
+        bindings:
+          captureEnvelope-in-0:
+            consumer:
+              configuration:
+                key.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+                value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+                schema.registry.url: http://localhost:8081
+                specific.avro.reader: true
+          consumeDbzEvent-in-0:
+            consumer:
+              configuration:
+                key.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+                value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+                schema.registry.url: http://localhost:8081
+                specific.avro.reader: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9090
+      client:
+        provider:
+          itp-standard:
+            issuer-uri: http://localhost:9090
+        registration:
+          itp-standard:
+            provider: itp-standard
+            client-id: itp-standard
+            client-secret: qwerqwer
+            redirect-uri: http://localhost:9999/login/oauth2/code/itp-standard
+            authorization-grant-type: client_credentials
+            scope:
+              - openid # Auto issue access token
+              - profile # Get profile
+              - email # Get email
+
+# Resilience4J
+resilience4j:
+  circuitbreaker:
+    instances:
+      account:
+        sliding-window-size: 10
+        failure-rate-threshold: 50 # Percentages
+        permitted-number-of-calls-in-half-open-state: 2
+        wait-duration-in-open-state: 10000
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    co.istad.chhaya.pipeline: DEBUG
+

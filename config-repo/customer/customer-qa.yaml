@@ -1,0 +1,7 @@
+service:
+  name: Customer Service (Quality Assurances)
+  version: 1.0-pre-released
+
+secret:
+  weak-password: ${WEAK_PASSWORD}
+  strong-password: ${STRONG_PASSWORD}

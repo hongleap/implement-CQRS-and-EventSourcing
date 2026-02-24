@@ -1,0 +1,4 @@
+spring:
+  info: ITP-Microservice
+  tag: itp
+  version: 2.0

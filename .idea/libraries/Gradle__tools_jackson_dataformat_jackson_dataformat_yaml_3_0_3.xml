@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: tools.jackson.dataformat:jackson-dataformat-yaml:3.0.3" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="tools.jackson.dataformat" artifactId="jackson-dataformat-yaml" version="3.0.3" baseVersion="3.0.3" />
+    <CLASSES>
+      <root url="jar://C:/Program Files/jdk-21.0.9/caches/modules-2/files-2.1/tools.jackson.dataformat/jackson-dataformat-yaml/3.0.3/e90b1fc68b51a8a2eba7c768f3578fec20c0f67f/jackson-dataformat-yaml-3.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,7 @@
+package hongleap.customer_service.domain.valueobject;
+
+public record CustomerEmail(
+        String primaryEmail,
+        String secondaryEmail
+) {
+}

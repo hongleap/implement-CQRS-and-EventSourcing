@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" flex items-center justify-around min-h-screen">
+
+<div class="bg-white p-8 rounded-xl w-full max-w-2xl ">
+    <img th:src="@{/images/undraw_welcome-cats_tw36.png}">
+</div>
+
+<div class="bg-white p-8 rounded-xl w-full max-w-md border-2 border-solid border-indigo-500">
+    <div class="text-center mb-8">
+        <h1 class="text-2xl font-bold text-gray-800">Welcome Back</h1>
+        <p class="text-gray-500 mt-2">Please enter your details</p>
+    </div>
+
+    <form th:action="@{/login}" method="post" class="space-y-6">
+        <div>
+            <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+            <input type="text" id="username" name="username" required
+                   class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm border-1 border-indigo-500 sm:text-sm"
+                   placeholder="Enter your username">
+        </div>
+
+        <div>
+            <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+            <input type="password" id="password" name="password" required
+                   class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm border-1 border-indigo-500 sm:text-sm"
+                   placeholder="********">
+        </div>
+
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <input id="remember-me" name="remember-me" type="checkbox"
+                       class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-indigo-500 rounded">
+                <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+            </div>
+            <div class="text-sm">
+                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot password?</a>
+            </div>
+        </div>
+
+        <button type="submit"
+                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150">
+            Log In
+        </button>
+    </form>
+</div>
+
+</body>
+</html>

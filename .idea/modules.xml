@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/itp-ebanking.iml" filepath="$PROJECT_DIR$/.idea/modules/itp-ebanking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/itp-ebanking.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/itp-ebanking.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/itp-ebanking.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/itp-ebanking.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/itp-ebanking.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/itp-ebanking.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/microservices/itp-ebanking.microservices.iml" filepath="$PROJECT_DIR$/.idea/modules/microservices/itp-ebanking.microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/microservices/account-service/itp-ebanking.microservices.account-service.iml" filepath="$PROJECT_DIR$/.idea/modules/microservices/account-service/itp-ebanking.microservices.account-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/microservices/account-service/itp-ebanking.microservices.account-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/microservices/account-service/itp-ebanking.microservices.account-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/microservices/account-service/itp-ebanking.microservices.account-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/microservices/account-service/itp-ebanking.microservices.account-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/microservices/customer-service/itp-ebanking.microservices.customer-service.iml" filepath="$PROJECT_DIR$/.idea/modules/microservices/customer-service/itp-ebanking.microservices.customer-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/microservices/customer-service/itp-ebanking.microservices.customer-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/microservices/customer-service/itp-ebanking.microservices.customer-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/microservices/customer-service/itp-ebanking.microservices.customer-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/microservices/customer-service/itp-ebanking.microservices.customer-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/microservices/pipeline-service/itp-ebanking.microservices.pipeline-service.iml" filepath="$PROJECT_DIR$/.idea/modules/microservices/pipeline-service/itp-ebanking.microservices.pipeline-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/microservices/pipeline-service/itp-ebanking.microservices.pipeline-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/microservices/pipeline-service/itp-ebanking.microservices.pipeline-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/microservices/pipeline-service/itp-ebanking.microservices.pipeline-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/microservices/pipeline-service/itp-ebanking.microservices.pipeline-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/itp-ebanking.spring-cloud.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/itp-ebanking.spring-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/admin-bff/itp-ebanking.spring-cloud.admin-bff.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/admin-bff/itp-ebanking.spring-cloud.admin-bff.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/admin-bff/itp-ebanking.spring-cloud.admin-bff.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/admin-bff/itp-ebanking.spring-cloud.admin-bff.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/admin-bff/itp-ebanking.spring-cloud.admin-bff.test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/admin-bff/itp-ebanking.spring-cloud.admin-bff.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/configserver/itp-ebanking.spring-cloud.configserver.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/configserver/itp-ebanking.spring-cloud.configserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/configserver/itp-ebanking.spring-cloud.configserver.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/configserver/itp-ebanking.spring-cloud.configserver.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/configserver/itp-ebanking.spring-cloud.configserver.test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/configserver/itp-ebanking.spring-cloud.configserver.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/eurekaserver/itp-ebanking.spring-cloud.eurekaserver.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/eurekaserver/itp-ebanking.spring-cloud.eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/eurekaserver/itp-ebanking.spring-cloud.eurekaserver.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/eurekaserver/itp-ebanking.spring-cloud.eurekaserver.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/eurekaserver/itp-ebanking.spring-cloud.eurekaserver.test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/eurekaserver/itp-ebanking.spring-cloud.eurekaserver.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/front-bff/itp-ebanking.spring-cloud.front-bff.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/front-bff/itp-ebanking.spring-cloud.front-bff.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/front-bff/itp-ebanking.spring-cloud.front-bff.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/front-bff/itp-ebanking.spring-cloud.front-bff.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/front-bff/itp-ebanking.spring-cloud.front-bff.test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/front-bff/itp-ebanking.spring-cloud.front-bff.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/gateway-server/itp-ebanking.spring-cloud.gateway-server.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/gateway-server/itp-ebanking.spring-cloud.gateway-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/gateway-server/itp-ebanking.spring-cloud.gateway-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/gateway-server/itp-ebanking.spring-cloud.gateway-server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/gateway-server/itp-ebanking.spring-cloud.gateway-server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/gateway-server/itp-ebanking.spring-cloud.gateway-server.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/iam-service/itp-ebanking.spring-cloud.iam-service.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/iam-service/itp-ebanking.spring-cloud.iam-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/iam-service/itp-ebanking.spring-cloud.iam-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/iam-service/itp-ebanking.spring-cloud.iam-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud/iam-service/itp-ebanking.spring-cloud.iam-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud/iam-service/itp-ebanking.spring-cloud.iam-service.test.iml" />
+    </modules>
+  </component>
+</project>
