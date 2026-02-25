@@ -11,7 +11,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
   profiles:
     active: dev
   config:
@@ -29,6 +29,6 @@ axon:
   axonserver:
     enabled: false
   serializer:
-    general: jackson3
-    events: jackson3
-    messages: jackson3
+    general: jackson
+    events: jackson
+    messages: jackson

@@ -8,6 +8,7 @@ import hongleap.customer_service.application.dto.update.ChangePhoneNumberRespons
 import java.util.UUID;
 
 public interface CustomerService {
+
     ChangePhoneNumberResponse changePhoneNumber(UUID customerId, ChangePhoneNumberRequest changePhoneNumberRequest);
     CreateCustomerResponse createCustomer(CreateCustomerRequest createCustomerRequest);
 

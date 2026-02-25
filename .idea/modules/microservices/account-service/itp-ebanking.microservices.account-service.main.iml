@@ -142,7 +142,6 @@
     <orderEntry type="library" name="Gradle: jakarta.transaction:jakarta.transaction-api:2.0.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.osgi:org.osgi.resource:1.0.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.osgi:org.osgi.service.serviceloader:1.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.axonframework:axon-spring-boot-starter:" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.postgresql:postgresql:42.7.8" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.checkerframework:checker-qual:3.49.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.netflix.netflix-commons:netflix-eventbus:0.3.0" level="project" />

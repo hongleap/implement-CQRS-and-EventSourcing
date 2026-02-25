@@ -4,6 +4,7 @@ import hongleap.common.domain.valueObject.CustomerSegmentId;
 import hongleap.customer_service.domain.valueobject.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.node.ContainerNode;
 
 import java.time.LocalDate;
 
@@ -20,6 +21,8 @@ public record CreateCustomerRequest(
     Kyc kyc,
     @NotNull
     Address address,
+    @NotNull
+    Contact contact,
     @NotBlank
     String phoneNumber,
     @NotNull

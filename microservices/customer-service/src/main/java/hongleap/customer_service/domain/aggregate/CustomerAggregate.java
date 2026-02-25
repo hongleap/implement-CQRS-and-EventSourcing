@@ -30,6 +30,7 @@ public class CustomerAggregate {
     @AggregateIdentifier
     private CustomerId customerId;
     private CustomerName name;
+    private CustomerEmail email;
     private CustomerGender gender;
     private LocalDate dob;
     private Kyc kyc;
@@ -48,11 +49,14 @@ public class CustomerAggregate {
         CustomerCreatedEvent customerCreatedEvent = CustomerCreatedEvent.builder()
                 .customerId(createCustomerCommand.customerId())
                 .name(createCustomerCommand.name())
+                .email(createCustomerCommand.email())
                 .gender(createCustomerCommand.gender())
                 .dob(createCustomerCommand.dob())
                 .kyc(createCustomerCommand.kyc())
                 .address(createCustomerCommand.address())
                 .contact(createCustomerCommand.contact())
+                .phoneNumber(createCustomerCommand.phoneNumber())
+                .customerSegmentId(createCustomerCommand.customerSegmentId())
                 .build();
 
         AggregateLifecycle.apply(customerCreatedEvent);
@@ -66,17 +70,20 @@ public class CustomerAggregate {
                 .customerId(changePhoneNumberCommand.customerId())
                 .phoneNumber(changePhoneNumberCommand.phoneNumber())
                 .build();
+        AggregateLifecycle.apply(customerPhoneNumberChangedEvent);
     }
 
     @EventSourcingHandler
     public void on(CustomerCreatedEvent customerCreatedEvent){
         this.customerId = customerCreatedEvent.customerId();
         this.name = customerCreatedEvent.name();
+        this.email = customerCreatedEvent.email();
         this.gender = customerCreatedEvent.gender();
         this.dob = customerCreatedEvent.dob();
         this.kyc = customerCreatedEvent.kyc();
         this.address = customerCreatedEvent.address();
         this.contact = customerCreatedEvent.contact();
+        this.customerSegmentId = customerCreatedEvent.customerSegmentId();
     }
 
     @EventSourcingHandler
