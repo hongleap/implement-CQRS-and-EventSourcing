@@ -83,6 +83,7 @@ public class CustomerAggregate {
         this.kyc = customerCreatedEvent.kyc();
         this.address = customerCreatedEvent.address();
         this.contact = customerCreatedEvent.contact();
+        this.phoneNumber = customerCreatedEvent.phoneNumber();
         this.customerSegmentId = customerCreatedEvent.customerSegmentId();
     }
 

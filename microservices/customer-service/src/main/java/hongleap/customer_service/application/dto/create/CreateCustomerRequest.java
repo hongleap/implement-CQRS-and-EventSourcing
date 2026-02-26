@@ -18,7 +18,7 @@ public record CreateCustomerRequest(
     @NotNull
     LocalDate dob,
     @NotNull
-    Kyc kyc,
+    Kyc kyc,    
     @NotNull
     Address address,
     @NotNull

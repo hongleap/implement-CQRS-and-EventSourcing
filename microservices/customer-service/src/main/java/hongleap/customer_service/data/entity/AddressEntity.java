@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.mapstruct.Mapping;
 
 import java.util.UUID;
 
@@ -19,8 +20,11 @@ public class AddressEntity {
     private UUID addressId;
 
     private String line;
+
     private String city;
+
     private String country;
+
     private String zipCode;
 
     @OneToOne(cascade = CascadeType.ALL)

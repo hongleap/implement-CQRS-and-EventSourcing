@@ -29,7 +29,9 @@ public class CustomerEntity {
     private CustomerEmail email;
 
     private LocalDate dob;
+
     private String phoneNumber;
+
     private CustomerGender gender;
 
     @OneToOne(mappedBy = "customer", cascade = CascadeType.ALL)

@@ -17,8 +17,8 @@ public class KycEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID kycId;
-    private String kycType;
-    private String kycNumber;
+    private String type;
+    private String number;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "customer_id")

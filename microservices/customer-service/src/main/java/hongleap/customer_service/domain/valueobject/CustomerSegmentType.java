@@ -1,7 +1,7 @@
 package hongleap.customer_service.domain.valueobject;
 
 public enum CustomerSegmentType {
-    REGULAR,
+    NORMAL,
     STUDENT,
     BUSINESS,
     VIP
