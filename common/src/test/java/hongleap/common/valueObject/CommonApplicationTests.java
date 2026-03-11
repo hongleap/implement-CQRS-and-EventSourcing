@@ -1,4 +1,4 @@
-package hongleap.common.domain.valueObject;
+package hongleap.common.valueObject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
