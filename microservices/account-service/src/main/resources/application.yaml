@@ -2,7 +2,16 @@ server:
   port: 20261
 spring:
   application:
-    name: account
+    name: account-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: itpusr
+    password: itp@168
+    url: jdbc:postgresql://localhost:16851/db_account
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
   profiles:
     active: dev
   config:
@@ -16,3 +25,28 @@ eureka:
   instance:
     instance-id: ${spring.application.name}
     prefer-ip-address: true
+customer:
+  service:
+    url: http://localhost:20260
+
+axon:
+  axonserver:
+    enabled: false
+  kafka:
+    bootstrap-servers: localhost:29092,localhost:29094,localhost:29096
+    default-topic: Axon.AccountCQRS.Events
+    client-id: kafka-axon-account
+    message-converter-mode: default # alternative is cloud_event <https://cloudevents.io/>
+    properties:
+      security.protocol: PLAINTEXT # PLAINTEXT for no security purpose
+    publisher:
+      confirmation-mode: transactional
+    producer:
+      transaction-id-prefix: kafka-axon-
+      retries: 5 # bigger than zero in case of using transactional confirmation-mode
+      event-processor-mode: tracking
+
+  serializer:
+    general: jackson
+    events: jackson
+    messages: jackson

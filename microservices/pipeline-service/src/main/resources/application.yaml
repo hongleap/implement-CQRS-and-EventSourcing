@@ -3,7 +3,7 @@ eureka:
     instance-id: ${spring.application.name}
     prefer-ip-address: true
 server:
-  port: 20262
+  port: 20263
 spring:
   application:
     name: pipeline
