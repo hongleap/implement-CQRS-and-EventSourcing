@@ -1,3 +1,4 @@
+include ':microservices:account-query-service'
 include ':microservices:account-service'
 include ':microservices:customer-service'
 include ':microservices:pipeline-service'
