@@ -1,0 +1,27 @@
+package hongleap.account_query_service.rest;
+
+import hongleap.account_query_service.application.dto.AccountQueryResponse;
+import hongleap.account_query_service.application.ports.input.service.AccountQueryService;
+import hongleap.account_query_service.domain.entity.Account;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
+
+import java.util.UUID;
+
+@RestController
+@RequestMapping("/api/accounts")
+@RequiredArgsConstructor
+public class AccountQueryController {
+
+    private final AccountQueryService accountQueryService;
+
+    @GetMapping("/{accountId}")
+    Mono<AccountQueryResponse>  getAccountById(@PathVariable UUID accountId){
+
+        return accountQueryService.getAccountById(accountId);
+    }
+}
