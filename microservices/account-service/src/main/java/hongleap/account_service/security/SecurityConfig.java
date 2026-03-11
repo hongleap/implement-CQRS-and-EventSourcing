@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.web.DefaultSecurityFilterChain;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -14,28 +15,22 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http){
-
-        // secured account endpoint
+    public DefaultSecurityFilterChain filterChain(HttpSecurity http) {
         http.authorizeHttpRequests(request -> request
-                .requestMatchers("/pubic").permitAll()
-                .anyRequest().authenticated()
-        );
+//                .requestMatchers("/public/**").permitAll()
+//                .anyRequest().authenticated();
+                .anyRequest().permitAll());
+        http.csrf(token -> token.disable());
+        http.httpBasic(basic -> basic.disable());
+        http.formLogin(form -> form.disable());
 
-        // unsecured account endpoint
-//        http.authorizeHttpRequests(request -> request
-//                .anyRequest().permitAll()
-//        );
-
-        http.csrf(AbstractHttpConfigurer::disable);
-        http.httpBasic(AbstractHttpConfigurer::disable);
-        http.formLogin(AbstractHttpConfigurer::disable);
-
-        http.oauth2ResourceServer(oauth2 -> oauth2
-                .jwt(Customizer.withDefaults()));
-
+        http.oauth2ResourceServer(oauth2 ->
+                oauth2.jwt(Customizer.withDefaults()));
         http.sessionManagement(session -> session
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        );
         return http.build();
+
     }
 }
+
