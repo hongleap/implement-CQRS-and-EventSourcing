@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ongres.stringprep:saslprep:2.2" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.ongres.stringprep" artifactId="saslprep" version="2.2" baseVersion="2.2" />
+    <CLASSES>
+      <root url="jar://C:/Program Files/jdk-21.0.9/caches/modules-2/files-2.1/com.ongres.stringprep/saslprep/2.2/1a0d29a48e83348cfdccdd598eb050cd083a60f8/saslprep-2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

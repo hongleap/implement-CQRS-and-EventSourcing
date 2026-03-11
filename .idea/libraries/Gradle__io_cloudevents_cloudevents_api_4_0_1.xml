@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.cloudevents:cloudevents-api:4.0.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.cloudevents" artifactId="cloudevents-api" version="4.0.1" baseVersion="4.0.1" />
+    <CLASSES>
+      <root url="jar://C:/Program Files/jdk-21.0.9/caches/modules-2/files-2.1/io.cloudevents/cloudevents-api/4.0.1/94d42196e5717b6d44d9c86ae6015710574f01bf/cloudevents-api-4.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

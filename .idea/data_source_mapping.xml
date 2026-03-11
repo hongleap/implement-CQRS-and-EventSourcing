@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/deployment/postgres/init_scripts/pg_itp_micro_init.sql" value="f6cf997a-ef9b-4655-a9c5-cc4f960b4e78" />
+  </component>
+</project>

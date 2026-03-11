@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.boot:spring-boot-r2dbc:4.0.3" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework.boot" artifactId="spring-boot-r2dbc" version="4.0.3" baseVersion="4.0.3" />
+    <CLASSES>
+      <root url="jar://C:/Program Files/jdk-21.0.9/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-r2dbc/4.0.3/761fa580da52e76b08e15fd3b9d377df91852ab3/spring-boot-r2dbc-4.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

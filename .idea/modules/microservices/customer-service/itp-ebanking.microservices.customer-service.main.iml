@@ -16,6 +16,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.42" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok-mapstruct-binding:0.2.0" level="project" />
     <orderEntry type="module" module-name="itp-ebanking.common.main" />
+    <orderEntry type="library" name="Gradle: org.axonframework.extensions.kafka:axon-kafka-spring-boot-starter:4.12.0" level="project" />
     <orderEntry type="library" name="Gradle: org.axonframework:axon-spring-boot-starter:4.13.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-actuator:4.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-security-oauth2-resource-server:4.0.1" level="project" />
@@ -25,6 +26,7 @@
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-webmvc:4.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.cloud:spring-cloud-starter-config:5.0.0" level="project" />
     <orderEntry type="library" name="Gradle: org.mapstruct:mapstruct:1.6.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.axonframework.extensions.kafka:axon-kafka-spring-boot-autoconfigure:4.12.0" level="project" />
     <orderEntry type="library" name="Gradle: org.axonframework:axon-spring-boot-autoconfigure:4.13.0" level="project" />
     <orderEntry type="library" name="Gradle: org.axonframework:axon-spring:4.13.0" level="project" />
     <orderEntry type="library" name="Gradle: org.axonframework:axon-configuration:4.13.0" level="project" />
@@ -53,6 +55,7 @@
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-webmvc:4.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.cloud:spring-cloud-config-client:5.0.0" level="project" />
     <orderEntry type="library" name="Gradle: tools.jackson.core:jackson-databind:3.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.axonframework.extensions.kafka:axon-kafka:4.12.0" level="project" />
     <orderEntry type="library" name="Gradle: org.axonframework:axon-server-connector:4.13.0" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:2.0.17" level="project" />
     <orderEntry type="library" name="Gradle: org.axonframework:axon-disruptor:4.13.0" level="project" />
@@ -106,6 +109,7 @@
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-servlet:4.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-webmvc:7.0.2" level="project" />
     <orderEntry type="library" name="Gradle: tools.jackson.core:jackson-core:3.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: io.cloudevents:cloudevents-kafka:4.0.1" level="project" />
     <orderEntry type="library" name="Gradle: io.axoniq:axonserver-connector-java:2025.2.1" level="project" />
     <orderEntry type="library" name="Gradle: com.lmax:disruptor:3.4.4" level="project" />
     <orderEntry type="library" name="Gradle: io.github.x-stream:mxparser:1.2.2" level="project" />
@@ -149,6 +153,8 @@
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:11.0.15" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:11.0.15" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-expression:7.0.2" level="project" />
+    <orderEntry type="library" name="Gradle: io.cloudevents:cloudevents-core:4.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.kafka:kafka-clients:4.1.1" level="project" />
     <orderEntry type="library" name="Gradle: io.grpc:grpc-stub:1.76.0" level="project" />
     <orderEntry type="library" name="Gradle: io.grpc:grpc-protobuf:1.76.0" level="project" />
     <orderEntry type="library" name="Gradle: io.grpc:grpc-netty-shaded:1.76.0" level="project" />
@@ -163,6 +169,7 @@
     <orderEntry type="library" name="Gradle: org.springframework:spring-context-support:7.0.2" level="project" />
     <orderEntry type="library" name="Gradle: jakarta.persistence:jakarta.persistence-api:3.2.0" level="project" />
     <orderEntry type="library" name="Gradle: jakarta.transaction:jakarta.transaction-api:2.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.cloudevents:cloudevents-api:4.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.guava:guava:33.4.8-android" level="project" />
     <orderEntry type="library" name="Gradle: io.grpc:grpc-api:1.76.0" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.24" level="project" />
@@ -191,6 +198,9 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: net.bytebuddy:byte-buddy:1.17.8" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.jaxb:jaxb-runtime:4.0.6" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: jakarta.xml.bind:jakarta.xml.bind-api:4.0.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.github.luben:zstd-jni:1.5.6-10" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.lz4:lz4-java:1.8.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.xerial.snappy:snappy-java:1.1.10.7" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: io.grpc:grpc-protobuf-lite:1.76.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.errorprone:error_prone_annotations:2.41.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: io.grpc:grpc-util:1.76.0" level="project" />

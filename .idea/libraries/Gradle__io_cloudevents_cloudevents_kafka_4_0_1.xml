@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.cloudevents:cloudevents-kafka:4.0.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.cloudevents" artifactId="cloudevents-kafka" version="4.0.1" baseVersion="4.0.1" />
+    <CLASSES>
+      <root url="jar://C:/Program Files/jdk-21.0.9/caches/modules-2/files-2.1/io.cloudevents/cloudevents-kafka/4.0.1/d2921ce1d38a79b0cfb654ea526deb2fcbfff89/cloudevents-kafka-4.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

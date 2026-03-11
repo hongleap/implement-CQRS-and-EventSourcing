@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework:spring-r2dbc:7.0.5" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework" artifactId="spring-r2dbc" version="7.0.5" baseVersion="7.0.5" />
+    <CLASSES>
+      <root url="jar://C:/Program Files/jdk-21.0.9/caches/modules-2/files-2.1/org.springframework/spring-r2dbc/7.0.5/a40bbb01b9ae2fe4bfed7f4901f7f3a250ffbf28/spring-r2dbc-7.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
