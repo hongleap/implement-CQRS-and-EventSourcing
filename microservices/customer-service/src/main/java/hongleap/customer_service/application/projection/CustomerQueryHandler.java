@@ -1,13 +1,12 @@
 package hongleap.customer_service.application.projection;
 
-import hongleap.customer_service.application.dto.query.CustomerPageResponse;
 import hongleap.customer_service.application.dto.query.CustomerResponse;
 import hongleap.customer_service.application.mapper.CustomerMapper;
 import hongleap.customer_service.data.entity.CustomerEntity;
-import hongleap.customer_service.data.entity.CustomerSegmentEntity;
 import hongleap.customer_service.data.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.axonframework.config.ProcessingGroup;
 import org.axonframework.queryhandling.QueryHandler;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -18,6 +17,7 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 @Slf4j
+@ProcessingGroup("customer-group")
 public class CustomerQueryHandler {
 
     private final CustomerRepository customerRepository;
@@ -36,4 +36,12 @@ public class CustomerQueryHandler {
 
         return customers.map(customerMapper::customerEntityToCustomerResponse);
     }
+
+    @QueryHandler
+    public CustomerResponse handle(GetCustomerByIdQuery query) {
+        CustomerEntity entity = customerRepository.findById(query.getCustomerId())
+                .orElseThrow(() -> new RuntimeException("Customer not found: " + query.getCustomerId()));
+        return customerMapper.customerEntityToCustomerResponse(entity);
+    }
+
 }
