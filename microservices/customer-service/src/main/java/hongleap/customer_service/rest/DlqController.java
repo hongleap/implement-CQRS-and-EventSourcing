@@ -1,0 +1,25 @@
+package hongleap.customer_service.rest;
+
+import hongleap.customer_service.application.config.DeadLetterProcessor;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.axonframework.config.ProcessingGroup;
+import org.axonframework.messaging.deadletter.SequencedDeadLetterProcessor;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.concurrent.CompletableFuture;
+@RestController
+@RequestMapping("/api/dlq")
+@RequiredArgsConstructor
+public class DlqController {
+
+    private final DeadLetterProcessor deadLetterProcessor;
+
+    @PostMapping("/{processing-group}/any")
+    public CompletableFuture<Boolean> processAny(@PathVariable("processing-group") String processingGroup){
+        return deadLetterProcessor.processorAnyFor(processingGroup);
+    }
+}
