@@ -1,5 +1,6 @@
 package hongleap.customer_service.rest;
 
+import hongleap.customer_service.application.CustomerQueryService;
 import hongleap.customer_service.application.CustomerService;
 import hongleap.customer_service.application.dto.create.CreateCustomerRequest;
 import hongleap.customer_service.application.dto.create.CreateCustomerResponse;
@@ -11,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -19,6 +21,7 @@ import java.util.UUID;
 @Slf4j
 public class CustomerController {
     private final CustomerService customerService;
+    private final CustomerQueryService customerQueryService;
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
@@ -33,4 +36,5 @@ public class CustomerController {
         log.info("Change phone number: {}", changePhoneNumberRequest);
         return customerService.changePhoneNumber(customerId, changePhoneNumberRequest);
     }
+
 }

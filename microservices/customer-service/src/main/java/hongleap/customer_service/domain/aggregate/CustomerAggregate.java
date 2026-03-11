@@ -20,7 +20,7 @@ import org.axonframework.spring.stereotype.Aggregate;
 import java.time.LocalDate;
 import java.util.List;
 
-@Aggregate // only get
+@Aggregate(snapshotTriggerDefinition = "customerSnapshotTriggerDefinition")
 @NoArgsConstructor
 @Getter
 @Slf4j

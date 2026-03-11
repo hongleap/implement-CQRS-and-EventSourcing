@@ -10,6 +10,7 @@ import java.util.UUID;
 public interface CustomerService {
 
     ChangePhoneNumberResponse changePhoneNumber(UUID customerId, ChangePhoneNumberRequest changePhoneNumberRequest);
+
     CreateCustomerResponse createCustomer(CreateCustomerRequest createCustomerRequest);
 
 }
