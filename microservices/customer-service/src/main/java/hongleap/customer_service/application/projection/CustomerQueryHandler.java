@@ -12,12 +12,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.web.server.ResponseStatusException;
 
 @Component
 @RequiredArgsConstructor
 @Slf4j
-@ProcessingGroup("customer-group")
+//@ProcessingGroup("customer-group")
 public class CustomerQueryHandler {
 
     private final CustomerRepository customerRepository;
@@ -39,9 +41,13 @@ public class CustomerQueryHandler {
 
     @QueryHandler
     public CustomerResponse handle(GetCustomerByIdQuery query) {
-        CustomerEntity entity = customerRepository.findById(query.getCustomerId())
-                .orElseThrow(() -> new RuntimeException("Customer not found: " + query.getCustomerId()));
-        return customerMapper.customerEntityToCustomerResponse(entity);
+//        CustomerEntity entity = customerRepository.findById(query.getCustomerId())
+//                .orElseThrow(() -> new RuntimeException("Customer not found: " + query.getCustomerId()));
+//        return customerMapper.customerEntityToCustomerResponse(entity);
+        return customerRepository.findById(query.getCustomerId())
+                .map(customerMapper::customerEntityToCustomerResponse)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+                        "Customer not found: " + query.getCustomerId()));
     }
 
 }
