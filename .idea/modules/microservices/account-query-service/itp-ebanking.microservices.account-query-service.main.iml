@@ -13,7 +13,9 @@
     <orderEntry type="jdk" jdkName="21" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.mapstruct:mapstruct-processor:1.6.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok-mapstruct-binding:0.2.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.42" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.mapstruct:mapstruct:1.6.3" level="project" />
     <orderEntry type="module" module-name="itp-ebanking.common.main" />
     <orderEntry type="library" name="Gradle: org.axonframework.extensions.kafka:axon-kafka-spring-boot-starter:4.12.0" level="project" />
     <orderEntry type="library" name="Gradle: org.axonframework:axon-spring-boot-starter:4.13.0" level="project" />
@@ -23,7 +25,6 @@
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-webflux:4.0.3" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.cloud:spring-cloud-starter-config:5.0.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:5.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.mapstruct:mapstruct:1.6.3" level="project" />
     <orderEntry type="library" name="Gradle: org.axonframework.extensions.kafka:axon-kafka-spring-boot-autoconfigure:4.12.0" level="project" />
     <orderEntry type="library" name="Gradle: org.axonframework:axon-spring-boot-autoconfigure:4.13.0" level="project" />
     <orderEntry type="library" name="Gradle: org.axonframework:axon-spring:4.13.0" level="project" />

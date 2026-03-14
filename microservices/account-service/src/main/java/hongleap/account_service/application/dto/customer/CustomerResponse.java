@@ -1,4 +1,4 @@
-package hongleap.account_service.application.dto.create.response;
+package hongleap.account_service.application.dto.customer;
 
 import hongleap.account_service.domain.valueObject.CustomerName;
 

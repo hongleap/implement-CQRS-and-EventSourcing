@@ -1,4 +1,4 @@
-package hongleap.account_service.application.dto.create.response;
+package hongleap.account_service.application.dto.deposit;
 
 import hongleap.common.domain.valueObject.Money;
 import lombok.Builder;

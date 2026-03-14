@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DatabaseMigrationSettings" liquibaseFileType="SQL" />
+  <component name="DatabaseMigrationSettings" lastSelectedDirectory="$PROJECT_DIR$/microservices/account-query-service/build/generated/sources/annotationProcessor/java/main/ddl" liquibaseFileType="SQL" />
 </project>

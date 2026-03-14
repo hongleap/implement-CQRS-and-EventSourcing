@@ -1,4 +1,4 @@
-package hongleap.account_service.application.dto.create.request;
+package hongleap.account_service.application.dto.create;
 
 import hongleap.common.domain.valueObject.BranchId;
 import hongleap.common.domain.valueObject.CustomerId;

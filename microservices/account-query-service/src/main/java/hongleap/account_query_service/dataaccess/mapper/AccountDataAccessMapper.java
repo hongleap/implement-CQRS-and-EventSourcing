@@ -9,6 +9,8 @@ import org.mapstruct.Mapping;
 public interface AccountDataAccessMapper {
 
     @Mapping(constant = "true", target = "new")
+    @Mapping(source = "money.amount", target = "balance")
+    @Mapping(source = "money.currency", target = "currency")
     AccountEntity accountToAccountEntity(Account account);
 
     Account accountEntityToAccount(AccountEntity accountEntity);

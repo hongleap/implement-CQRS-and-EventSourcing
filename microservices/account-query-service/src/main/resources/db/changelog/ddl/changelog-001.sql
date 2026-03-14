@@ -137,4 +137,3 @@ ALTER TABLE domain_event_entry
 -- changeset Leap:1773029039157-10
 ALTER TABLE snapshot_event_entry
     ADD CONSTRAINT uc_snapshotevententry_eventidentifier UNIQUE (event_identifier);
-

@@ -1,4 +1,4 @@
-package hongleap.account_service.application.dto.create.response;
+package hongleap.account_service.application.dto.freeze;
 
 import hongleap.common.domain.valueObject.AccountId;
 import lombok.Builder;

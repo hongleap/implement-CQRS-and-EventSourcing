@@ -1,4 +1,4 @@
-package hongleap.account_service.application.dto.create.response;
+package hongleap.account_service.application.dto.create;
 
 import hongleap.common.domain.valueObject.AccountTypeCode;
 import hongleap.common.domain.valueObject.Money;
@@ -13,6 +13,7 @@ public record CreateAccountResponse(
         UUID accountId,
         String accountHolder,
         AccountTypeCode accountTypeCode,
+        UUID branchId,
         Money initialBalance,
         @NotBlank
         String message
