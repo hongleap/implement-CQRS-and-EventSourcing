@@ -70,6 +70,7 @@ public class CustomerAggregate {
                 .customerId(changePhoneNumberCommand.customerId())
                 .phoneNumber(changePhoneNumberCommand.phoneNumber())
                 .build();
+
         AggregateLifecycle.apply(customerPhoneNumberChangedEvent);
     }
 

@@ -18,7 +18,6 @@ public class AccountTypeEntity {
 
     @Id
     private UUID accountTypeId;
-
     private AccountTypeCode accountTypeCode;
 
 }

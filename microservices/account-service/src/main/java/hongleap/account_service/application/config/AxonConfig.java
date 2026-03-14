@@ -24,6 +24,7 @@ public class AxonConfig {
     public void registerInterceptors(CommandBus commandBus) {
         commandBus.registerDispatchInterceptor(interceptor);
     }
+
     @Bean
     public SnapshotTriggerDefinition customerSnapshotTriggerDefinition(Snapshotter snapshotter) {
         return new EventCountSnapshotTriggerDefinition(snapshotter, 5);

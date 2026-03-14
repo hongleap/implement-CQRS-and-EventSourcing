@@ -1,10 +1,9 @@
 package hongleap.account_service.application.config;
 
 
-import hongleap.account_service.application.client.CustomerClient;
-import hongleap.account_service.application.dto.create.response.CustomerResponse;
+import hongleap.account_service.application.adapter.CustomerClient;
+import hongleap.account_service.application.dto.customer.CustomerResponse;
 import hongleap.account_service.domain.command.CreateAccountCommand;
-import hongleap.common.domain.valueObject.CustomerId;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.CommandMessage;
