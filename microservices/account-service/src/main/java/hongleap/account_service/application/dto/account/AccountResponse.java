@@ -1,4 +1,4 @@
-package hongleap.account_service.application.dto.create.response;
+package hongleap.account_service.application.dto.account;
 
 import lombok.Builder;
 import java.math.BigDecimal;
@@ -9,6 +9,7 @@ public record AccountResponse(
         UUID accountId,
         String accountTypeCode,
         String accountHolder,
+        UUID branchId,
         BigDecimal balance,
         String status
 ) {}
