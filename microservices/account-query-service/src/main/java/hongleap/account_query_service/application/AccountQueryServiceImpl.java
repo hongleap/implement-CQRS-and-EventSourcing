@@ -1,4 +1,4 @@
-package hongleap.account_query_service.application.adapter;
+package hongleap.account_query_service.application;
 
 import hongleap.account_query_service.application.dto.AccountQueryResponse;
 import hongleap.account_query_service.application.mapper.AccountAppDataMapper;

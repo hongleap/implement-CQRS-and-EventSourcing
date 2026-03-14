@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @RequiredArgsConstructor
 @ProcessingGroup("account-group")
-public class AccountAxonKafkaListener   {
+public class AccountAxonKafkaListener {
 
     private final AccountMessageListener accountMessageListener;
 

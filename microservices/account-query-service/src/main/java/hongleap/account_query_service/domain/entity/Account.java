@@ -36,5 +36,4 @@ public class Account{
     private String createdBy;
     private String updatedBy;
 
-
 }

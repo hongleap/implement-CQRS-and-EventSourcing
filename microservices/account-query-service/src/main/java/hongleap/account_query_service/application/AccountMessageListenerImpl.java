@@ -1,8 +1,7 @@
-package hongleap.account_query_service.application.adapter;
+package hongleap.account_query_service.application;
 
 import hongleap.account_query_service.application.mapper.AccountAppDataMapper;
 import hongleap.account_query_service.application.ports.input.message.listener.AccountMessageListener;
-import hongleap.account_query_service.application.ports.input.service.AccountQueryService;
 import hongleap.account_query_service.application.ports.output.repository.AccountQueryRepository;
 import hongleap.account_query_service.domain.entity.Account;
 import hongleap.common.domain.event.AccountCreatedEvent;
@@ -23,6 +22,6 @@ public class AccountMessageListenerImpl implements AccountMessageListener {
         Account account = accountAppDataMapper.accountCreatedEventToAccount(accountCreatedEvent);
         accountQueryRepository.save(account)
                 .doOnSuccess(data ->
-                        log.info("Saved Account = {} successfully", accountCreatedEvent.accountId()));
+                        log.info("Saved Account = {} successfully", accountCreatedEvent)).subscribe();
     }
 }

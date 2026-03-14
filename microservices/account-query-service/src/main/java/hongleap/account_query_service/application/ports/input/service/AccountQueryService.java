@@ -6,7 +6,7 @@ import reactor.core.publisher.Mono;
 
 import java.util.UUID;
 
-public interface AccountQueryService {
+public interface  AccountQueryService {
 
     Mono<AccountQueryResponse> getAccountById(UUID accountId);
 }

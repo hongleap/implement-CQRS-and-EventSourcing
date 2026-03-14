@@ -7,6 +7,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.jspecify.annotations.Nullable;
+import org.springframework.data.domain.Persistable;
 
 import java.time.ZonedDateTime;
 import java.util.UUID;
@@ -39,7 +41,6 @@ public class AccountEntity {
     private ZonedDateTime updatedAt;
     private String createdBy;
     private String updatedBy;
-
 
     @ManyToOne
     @JoinColumn(name = "account_type_id")

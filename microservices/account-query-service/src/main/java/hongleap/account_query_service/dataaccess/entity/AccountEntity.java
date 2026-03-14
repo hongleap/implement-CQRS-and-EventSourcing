@@ -1,12 +1,17 @@
 package hongleap.account_query_service.dataaccess.entity;
 
-import hongleap.common.domain.valueObject.Currency;
+import hongleap.common.domain.valueObject.Money;
 import hongleap.common.domain.valueObject.AccountStatus;
 import hongleap.common.domain.valueObject.AccountTypeCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+import org.jspecify.annotations.Nullable;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.annotation.Version;
+import org.springframework.data.domain.Persistable;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.math.BigDecimal;
@@ -17,7 +22,8 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @Table(name = "accounts")
-public class AccountEntity {
+@ToString
+public class AccountEntity implements Persistable<UUID>{
 
     @Id
     private UUID accountId;
@@ -32,7 +38,7 @@ public class AccountEntity {
     private AccountStatus status;
 
     private BigDecimal balance;
-    private Currency currency;
+    private String currency;
 
     private ZonedDateTime createdAt;
     private ZonedDateTime updatedAt;
@@ -40,5 +46,21 @@ public class AccountEntity {
     private String updatedBy;
 
     private AccountTypeEntity accountType;
+
+//    @Version
+//    private Long version;
+
+    @Transient
+    private boolean isNew;
+
+    @Override
+    public @Nullable UUID getId() {
+        return accountId;
+    }
+
+    @Override
+    public boolean isNew() {
+        return isNew;
+    }
 
 }

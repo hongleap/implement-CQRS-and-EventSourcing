@@ -1,19 +1,19 @@
 package hongleap.account_service.rest.controller;
 
-import hongleap.account_service.application.AccountService;
-import hongleap.account_service.application.dto.create.request.CreateAccountRequest;
-import hongleap.account_service.application.dto.create.request.DepositMoneyRequest;
-import hongleap.account_service.application.dto.create.request.FrozenRequest;
-import hongleap.account_service.application.dto.create.request.WithdrawMoneyRequest;
-import hongleap.account_service.application.dto.create.response.*;
+import hongleap.account_service.application.port.input.service.AccountService;
+import hongleap.account_service.application.dto.create.CreateAccountRequest;
+import hongleap.account_service.application.dto.create.CreateAccountResponse;
+import hongleap.account_service.application.dto.deposit.DepositMoneyRequest;
+import hongleap.account_service.application.dto.freeze.FrozenRequest;
+import hongleap.account_service.application.dto.withdraw.WithdrawMoneyRequest;
+import hongleap.account_service.application.dto.deposit.DepositMoneyResponse;
+import hongleap.account_service.application.dto.freeze.FrozenResponse;
+import hongleap.account_service.application.dto.withdraw.WithdrawMoneyResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.UUID;
 
 @RequestMapping("/api/accounts")
 @RestController

@@ -2,7 +2,7 @@ package hongleap.account_service.application.mapper;
 
 import hongleap.account_service.data.entity.AccountEntity;
 
-import hongleap.account_service.application.dto.create.request.CreateAccountRequest;
+import hongleap.account_service.application.dto.create.CreateAccountRequest;
 import hongleap.account_service.domain.command.DepositMoneyCommand;
 import hongleap.account_service.domain.command.WithdrawMoneyCommand;
 import hongleap.account_service.domain.command.CreateAccountCommand;
