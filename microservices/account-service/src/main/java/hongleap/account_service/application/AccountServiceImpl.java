@@ -1,13 +1,15 @@
 package hongleap.account_service.application;
 
-import hongleap.account_service.application.dto.create.request.CreateAccountRequest;
-import hongleap.account_service.application.dto.create.request.DepositMoneyRequest;
-import hongleap.account_service.application.dto.create.request.FrozenRequest;
-import hongleap.account_service.application.dto.create.request.WithdrawMoneyRequest;
-import hongleap.account_service.application.dto.create.response.*;
-import hongleap.account_service.application.dto.query.FindAccountByIdQuery;
-import hongleap.account_service.application.dto.query.FindAllAccountsQuery;
+import hongleap.account_service.application.dto.create.CreateAccountRequest;
+import hongleap.account_service.application.dto.create.CreateAccountResponse;
+import hongleap.account_service.application.dto.deposit.DepositMoneyRequest;
+import hongleap.account_service.application.dto.freeze.FrozenRequest;
+import hongleap.account_service.application.dto.withdraw.WithdrawMoneyRequest;
+import hongleap.account_service.application.dto.deposit.DepositMoneyResponse;
+import hongleap.account_service.application.dto.freeze.FrozenResponse;
+import hongleap.account_service.application.dto.withdraw.WithdrawMoneyResponse;
 import hongleap.account_service.application.mapper.AccountMapper;
+import hongleap.account_service.application.port.input.service.AccountService;
 import hongleap.account_service.domain.command.CreateAccountCommand;
 import hongleap.account_service.domain.command.DepositMoneyCommand;
 import hongleap.account_service.domain.command.FreezeAccountCommand;
@@ -16,13 +18,9 @@ import hongleap.common.domain.valueObject.AccountId;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.axonframework.messaging.responsetypes.ResponseTypes;
-import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 
 @Service
 @RequiredArgsConstructor
@@ -34,24 +32,6 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public CreateAccountResponse createAccount(CreateAccountRequest createAccountRequest) {
-
-//        CreateAccountCommand createAccountCommand = accountMapper
-//                .createAccountRequestToCreateAccountCommand(
-//                        new AccountId(UUID.randomUUID()),createAccountRequest);
-//
-//        log.info("CreateAccountCommand: {}", createAccountCommand);
-//
-//        // 2. Invoke and handle Axon command gateway
-//        AccountId result = commandGateway.sendAndWait(createAccountCommand);
-//        log.info("CreateAccountCommand result: {}", result);
-//
-//        return CreateAccountResponse.builder()
-//                .accountId(createAccountCommand.accountId().value())
-//                .accountTypeCode(createAccountCommand.accountTypeCode())
-//                .accountHolder(createAccountCommand.accountHolder())
-//                .initialBalance(createAccountCommand.initialBalance())
-//                .message("Account created successfully")
-//                .build();
 
         log.info("createAccountRequest: {}", createAccountRequest);
 
