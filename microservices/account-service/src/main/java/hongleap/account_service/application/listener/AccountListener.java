@@ -1,7 +1,7 @@
 package hongleap.account_service.application.listener;
 
-import hongleap.account_service.application.client.CustomerClient;
-import hongleap.account_service.application.dto.create.response.CustomerResponse;
+import hongleap.account_service.application.adapter.CustomerClient;
+import hongleap.account_service.application.dto.customer.CustomerResponse;
 import hongleap.account_service.application.mapper.AccountMapper;
 import hongleap.account_service.data.entity.AccountEntity;
 import hongleap.account_service.data.entity.AccountTypeEntity;
@@ -14,9 +14,9 @@ import hongleap.account_service.data.repository.CustomerRepository;
 import hongleap.common.domain.event.AccountCreatedEvent;
 import hongleap.common.domain.valueObject.AccountStatus;
 import hongleap.account_service.domain.valueObject.CustomerName;
-import hongleap.common.domain.valueObject.CustomerId;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -28,6 +28,7 @@ import java.util.UUID;
 @Component
 @RequiredArgsConstructor
 @Slf4j
+@ProcessingGroup("account-group")
 public class AccountListener {
 
     private final AccountRepository accountRepository;
@@ -71,13 +72,25 @@ public class AccountListener {
         accountEntity.setUpdatedAt(ZonedDateTime.now());
         accountEntity.setUpdatedBy("system");
         accountEntity.setCustomerId(customerId);
-//        accountEntity.setCustomerId(accountCreatedEvent.customerId().getValue());
-//        accountEntity.setBranchId(accountCreatedEvent.branchId().branchId()); // 👈 set directly
 
-        BranchEntity branchEntity = branchRepository
-                .findById(accountCreatedEvent.branchId().value())
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Branch Not Found"));
-        accountEntity.setBranchId(branchEntity.getId());
+//        BranchEntity branchEntity = branchRepository
+//                .findById(accountCreatedEvent.branchId().value())
+//                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Branch Not Found"));
+//        accountEntity.setBranchId(branchEntity.getId());
+
+        // Set branch only if branchId is present
+        UUID branchId = (accountCreatedEvent.branchId() != null)
+                ? accountCreatedEvent.branchId().value()
+                : null;
+
+        if (branchId != null) {
+            BranchEntity branchEntity = branchRepository
+                    .findById(branchId)
+                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Branch Not Found"));
+            accountEntity.setBranchId(branchEntity.getId());
+        } else {
+            accountEntity.setBranchId(null);
+        }
 
         // Link account type by code, not by accountId
         AccountTypeEntity accountType = accountTypeRepository
