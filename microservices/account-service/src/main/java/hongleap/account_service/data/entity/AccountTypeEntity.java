@@ -24,6 +24,7 @@ public class AccountTypeEntity {
 
     @OneToMany(mappedBy = "accountType")
     private List<AccountEntity> accounts;
+
 }
 
 

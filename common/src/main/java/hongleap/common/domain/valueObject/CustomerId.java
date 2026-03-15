@@ -22,4 +22,5 @@ public record CustomerId(UUID value) {
     public String toJson() {
         return value.toString();
     }
+
 }

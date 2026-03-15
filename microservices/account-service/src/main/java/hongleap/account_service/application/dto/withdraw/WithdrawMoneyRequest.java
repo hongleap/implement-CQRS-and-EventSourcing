@@ -7,11 +7,9 @@ import lombok.Builder;
 
 @Builder
 public record WithdrawMoneyRequest(
-
         AccountId accountId,
         TransactionId transactionId,
         Money amount,
         String remark
-
 ) {
 }

@@ -19,12 +19,12 @@ public class CustomerClient implements Customer {
 
     public CustomerClient(@Value("${customer.service.url}") String customerServiceUrl) {
         this.webClient = WebClient.builder()
-                .baseUrl(customerServiceUrl) // ✅ resolved from application.properties
+                .baseUrl(customerServiceUrl) // resolved from application.properties
                 .build();
     }
 
     @Override
-    public Optional<CustomerResponse> getCustomerById(String customerId) {  // ✅ accepts String
+    public Optional<CustomerResponse> getCustomerById(String customerId) {  // accepts String
         return webClient.get()
                 .uri("/api/customers/{id}", customerId)
                 .retrieve()

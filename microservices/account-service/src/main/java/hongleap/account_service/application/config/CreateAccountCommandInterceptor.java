@@ -18,8 +18,7 @@ import java.util.function.BiFunction;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class CreateAccountCommandInterceptor
-        implements MessageDispatchInterceptor<CommandMessage<?>> {
+public class CreateAccountCommandInterceptor implements MessageDispatchInterceptor<CommandMessage<?>> {
 
     private final CustomerClient customerClient; // ← your RestClient wrapper
 

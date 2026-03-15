@@ -22,9 +22,8 @@ public class CustomerEntity {
 
     @Id
     private UUID customerId;
-
     @Embedded
     private CustomerName customerName;
-
     private String phoneNumber;
+
 }

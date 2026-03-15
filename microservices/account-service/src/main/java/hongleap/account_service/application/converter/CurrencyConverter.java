@@ -5,6 +5,7 @@ import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
 @Converter(autoApply = true)
+// Convert enum to string
 public class CurrencyConverter implements AttributeConverter<Currency, String> {
 
     @Override

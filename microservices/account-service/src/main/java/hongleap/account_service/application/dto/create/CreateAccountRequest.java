@@ -7,7 +7,6 @@ import hongleap.common.domain.valueObject.Money;
 import jakarta.validation.constraints.NotNull;
 
 public record CreateAccountRequest(
-
         CustomerId customerId,
         @NotNull
         String accountNumber,

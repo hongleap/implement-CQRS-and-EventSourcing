@@ -19,9 +19,9 @@ public class BranchEntity {
 
     @Id
     private UUID id;
-
     private String branchName;
     private Boolean isOpened;
+
 }
 
 

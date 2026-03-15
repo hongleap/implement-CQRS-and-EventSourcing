@@ -5,7 +5,10 @@ import lombok.NonNull;
 
 import java.util.UUID;
 
-public record AccountId(UUID value) {
+public record AccountId(
+        UUID value
+) {
+
     @NonNull
     @Override
     public String toString() {
